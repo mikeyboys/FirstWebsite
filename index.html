@@ -1,247 +1,166 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIRRAS Consultants - Security Vetting & DISP Specialists</title>
+    <title>Staff Apps Australia - Custom PowerApps Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom styles for a smoother experience */
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
-        /* Add a subtle transition to all elements for smoother interactions */
-        * {
-            transition: all 0.2s ease-in-out;
+        .hero-bg {
+            background-color: #F0F4F8;
         }
-        /* Styles for modal animation */
-        #privacy-modal.hidden {
-            display: none;
+        .cta-button {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
     <!-- Header & Navigation -->
-    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-40">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-3 text-2xl font-bold text-[#00457e]">
-                <!-- Logo Added Here -->
-                <img src="SIRRAS_Logo.png" alt="SIRRAS Consultants Logo" class="h-8 w-auto" onerror="this.onerror=null;this.src='https://placehold.co/276x276/e6eef2/00457e?text=LOGO';">
-                <span>SIRRAS Consultants</span>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="StaffAppsLogo.png" 
+                     alt="StaffApps Logo" 
+                     class="h-8 w-auto mr-3" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/100x40/3B82F6/FFFFFF?text=Logo';">
+                <span class="text-2xl font-bold text-gray-900" style="letter-spacing: 0.1em;">STAFFAPPS</span>
             </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-600 hover:text-[#00457e] transition duration-300">Home</a>
-                <a href="#services" class="text-gray-600 hover:text-[#00457e] transition duration-300">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-[#00457e] transition duration-300">About Us</a>
-                <a href="#careers" class="text-gray-600 hover:text-[#00457e] transition duration-300">Careers</a>
-                <a href="#contact" class="text-gray-600 hover:text-[#00457e] transition duration-300">Contact</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </nav>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 hover:text-[#00457e] focus:outline-none" aria-label="Toggle mobile menu">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+                <!-- Mobile menu button can be added here if needed -->
             </div>
-        </nav>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="#home" class="block py-3 px-6 text-base text-gray-700 hover:bg-[#e6eef2]">Home</a>
-            <a href="#services" class="block py-3 px-6 text-base text-gray-700 hover:bg-[#e6eef2]">Services</a>
-            <a href="#about" class="block py-3 px-6 text-base text-gray-700 hover:bg-[#e6eef2]">About Us</a>
-            <a href="#careers" class="block py-3 px-6 text-base text-gray-700 hover:bg-[#e6eef2]">Careers</a>
-            <a href="#contact" class="block py-3 px-6 text-base text-gray-700 hover:bg-[#e6eef2]">Contact</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="bg-[#00457e] text-white">
-            <div class="container mx-auto px-6 py-24 md:py-40 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-4">Expert Security Assessments & Risk Management</h1>
-                <p class="text-lg md:text-xl text-gray-200 leading-relaxed mb-10 max-w-3xl mx-auto">Providing professional, timely, and cost-effective security clearances for The Australian Government and Defence Industry partners.</p>
-                <a href="#contact" class="bg-white text-[#00457e] font-bold py-4 px-10 rounded-full hover:bg-[#e6eef2] transition duration-300 transform hover:scale-105 shadow-lg">Contact Us Today</a>
+        <section id="home" class="hero-bg">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                    Unlock Your Team's Potential with Custom Business Apps
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    We build tailored PowerApps that replace clunky spreadsheets, streamline your processes, and automate workflows, so your staff can focus on what truly matters.
+                </p>
+                <div class="mt-8">
+                    <a href="#contact" class="cta-button bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700">
+                        Get a Free Consultation
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-24 bg-white">
+        <section id="services" class="py-20">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#00457e] tracking-tight">Our Core Services</h2>
-                    <p class="text-gray-600 mt-3 text-lg">Specialised solutions to meet your security obligations.</p>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Our Services</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">From initial idea to final rollout, we provide end-to-end solutions to empower your business.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-12">
-                    <!-- Service 1: Security Assessments -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                        <div class="flex items-center mb-5">
-                             <svg class="w-12 h-12 text-[#00457e] mr-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                            <h3 class="text-2xl font-bold text-gray-900">Government Security Assessments</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                         </div>
-                        <p class="text-gray-600 leading-relaxed">We conduct comprehensive security clearance assessments on behalf of the Australian Government. Our highly experienced and qualified officers handle all clearance levels with the utmost professionalism and confidentiality.</p>
-                        <ul class="mt-5 space-y-3 text-gray-600 list-disc list-inside">
-                            <li>Baseline Vetting (BL)</li>
-                            <li>Negative Vetting Level 1 (NV1)</li>
-                            <li>Negative Vetting Level 2 (NV2)</li>
-                            <li>Positive Vetting (PV)</li>
-                        </ul>
+                        <h3 class="text-xl font-bold mb-2">Custom PowerApps Development</h3>
+                        <p class="text-gray-600">We design and build intuitive, powerful applications tailored specifically to your business needs, helping you move away from inefficient spreadsheets and legacy systems.</p>
                     </div>
-
-                    <!-- Service 2: DISP Consultation -->
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                         <div class="flex items-center mb-5">
-                            <svg class="w-12 h-12 text-[#00457e] mr-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 S0 001 1v5m-4 0h4"></path></svg>
-                            <h3 class="text-2xl font-bold text-gray-900">DISP Membership Consultation</h3>
+                    <!-- Service Card 2 -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a2 2 0 01-2-2V7a2 2 0 012-2h2.586a1 1 0 01.707.293l2.414 2.414a1 1 0 01.293.707V8z" /></svg>
                         </div>
-                        <p class="text-gray-600 leading-relaxed">Navigating the Defence Industry Security Program (DISP) can be complex. We provide expert guidance to help your business meet the security requirements for DISP membership, enabling you to partner with the Australian Defence industry.</p>
-                         <ul class="mt-5 space-y-3 text-gray-600 list-disc list-inside">
-                            <li>Governance & Security Risk Management</li>
-                            <li>Personnel & Physical Security</li>
-                            <li>Information & Cyber Security</li>
-                            <li>Achieve and maintain DISP accreditation</li>
-                        </ul>
+                        <h3 class="text-xl font-bold mb-2">Requirements Scoping & Staff Consultation</h3>
+                        <p class="text-gray-600">Our process starts with you. We talk directly to your staff to understand their daily tasks, pain points, and needs to ensure the final app is a perfect fit for your team.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Workflow Automation</h3>
+                        <p class="text-gray-600">We identify and automate repetitive manual tasks, freeing up valuable time for your employees, reducing errors, and increasing overall operational efficiency.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- About Us Section -->
-        <section id="about" class="py-24 bg-[#e6eef2]">
+        <section id="about" class="bg-gray-50 py-20">
             <div class="container mx-auto px-6">
-                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#00457e] tracking-tight">About Us</h2>
-                 </div>
-                 <div class="max-w-5xl mx-auto text-left grid md:grid-cols-2 gap-12 items-center">
-                    <div class="leading-relaxed text-gray-700 space-y-5">
-                        <p>SIRRAS Consultants is a premier security risk management company with extensive expertise in government security vetting and private sector employment screening. Our team is comprised of highly qualified professionals from diverse backgrounds, including intelligence, security, law enforcement, and military counter-intelligence.</p>
-                        <p>We pride ourselves on our exceptional reputation and an unparalleled level of support for our clients. As part of the working group that developed the Australian Standard AS4811-2006 for 'Employment Screening', we are leaders in establishing best practices within the industry.</p>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Teamwork" alt="A team collaborating on a project" class="rounded-lg shadow-lg">
                     </div>
-                    <div class="bg-white p-8 rounded-xl shadow-md">
-                        <ul class="space-y-5">
-                            <li class="flex items-start">
-                                <svg class="w-7 h-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span><span class="font-semibold text-gray-800">Unmatched Expertise:</span> Decades of combined experience in government and defence security.</span>
-                            </li>
-                             <li class="flex items-start">
-                                <svg class="w-7 h-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span><span class="font-semibold text-gray-800">Professional & Timely:</span> Efficient and thorough processes to meet your deadlines.</span>
-                            </li>
-                             <li class="flex items-start">
-                                <svg class="w-7 h-7 text-green-500 mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span><span class="font-semibold text-gray-800">Australia-Wide:</span> Representatives in all Australian states and territories to support your needs.</span>
-                            </li>
-                        </ul>
+                    <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                        <h2 class="text-3xl font-bold">We're More Than Just Developers</h2>
+                        <p class="mt-4 text-gray-600">At Staff Apps Australia, we believe the best technology is built around people. Our primary goal is to listen and understand the unique challenges your business faces. We pride ourselves on creating solutions that aren't just technically sound, but are genuinely useful and adopted with enthusiasm by your staff.</p>
+                        <p class="mt-4 text-gray-600">We also offer general consulting to help you navigate the ever-changing tech landscape and make strategic decisions that drive growth.</p>
                     </div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- Careers Section -->
-        <section id="careers" class="py-24 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#00457e] tracking-tight">Careers</h2>
-                <p class="text-gray-600 mt-3 mb-10 text-lg max-w-3xl mx-auto">At SIRRAS, our success is built on the quality of our people. We foster a respectful, inclusive, and diverse work environment where every team member can contribute to their full potential.</p>
-                <div class="max-w-3xl mx-auto bg-gray-50 p-10 rounded-xl shadow-lg text-left">
-                    <h3 class="font-bold text-2xl text-gray-800 mb-4">Current Opportunities</h3>
-                    <ul class="list-disc list-inside text-gray-700">
-                        <li>There are no currently listed opportunities.</li>
-                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-24 bg-[#e6eef2]">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#00457e] tracking-tight">Get in Touch</h2>
-                <p class="text-gray-600 mt-3 mb-10 text-lg">Contact us today for an initial consultation or to express interest in a career.</p>
-                <div class="bg-[#00457e] text-white inline-block p-10 rounded-xl shadow-2xl">
-                    <p class="text-lg">Phone:</p>
-                    <a href="tel:0735418900" class="text-3xl font-bold hover:underline">07 3541 8900</a>
-                    <p class="text-lg mt-8">Email:</p>
-                    <a href="mailto:enquiries@sirras.com.au" class="text-xl font-semibold hover:underline">enquiries@sirras.com.au</a>
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Ready to Transform Your Business?</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Let's have a chat about your needs. Get in touch via email or phone.</p>
+                </div>
+                <div class="max-w-2xl mx-auto text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-gray-800">Michael Boys</h3>
+                        <div class="mt-6 space-y-4 text-lg">
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                <a href="mailto:michael.boys@staffapps.com.au" class="text-blue-600 hover:underline">michael.boys@staffapps.com.au</a>
+                            </p>
+                            <p class="flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                                <a href="tel:0432912601" class="text-blue-600 hover:underline">0432 912 601</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300">
-        <div class="container mx-auto px-6 py-6 text-center">
-            <p class="mb-2">&copy; 2024 SIRRAS Consultants. All Rights Reserved.</p>
-            <a href="#" id="privacy-link" class="text-sm text-gray-400 hover:text-white hover:underline">Privacy Policy</a>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Staff Apps Australia. All Rights Reserved.</p>
+            <p class="text-gray-400 mt-2">Empowering businesses with custom app solutions.</p>
         </div>
     </footer>
-
-    <!-- Privacy Modal -->
-    <div id="privacy-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl p-8 relative transform transition-all" id="privacy-modal-content">
-            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800" aria-label="Close privacy policy">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <h3 class="text-2xl font-bold text-[#00457e] mb-4">Privacy Policy</h3>
-            <div class="text-gray-600 space-y-4 leading-relaxed">
-                <p>SIRRAS Consultants is committed to protecting your privacy. We recognise the importance of information security and handle all personal data in compliance with the Privacy Act and the Australian Privacy Principles (APPs).</p>
-                <p>All information received from clients, candidates, and third parties during the security assessment and vetting process is treated with the strictest confidence. Our processes and procedures are designed to ensure your data is handled securely and used only for its intended purpose. We do not share your personal information with unauthorised third parties.</p>
-                <p>If you have any questions about our privacy practices, please contact us.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript for mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let i = 0; i < mobileMenuLinks.length; i++) {
-            mobileMenuLinks[i].addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
-        
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-
-        // JavaScript for Privacy Modal
-        const privacyLink = document.getElementById('privacy-link');
-        const privacyModal = document.getElementById('privacy-modal');
-        const closeModalButton = document.getElementById('close-modal-button');
-
-        privacyLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            privacyModal.classList.remove('hidden');
-        });
-
-        closeModalButton.addEventListener('click', () => {
-            privacyModal.classList.add('hidden');
-        });
-
-        privacyModal.addEventListener('click', (e) => {
-            if (e.target === privacyModal) {
-                privacyModal.classList.add('hidden');
-            }
-        });
-    </script>
 
 </body>
 </html>
