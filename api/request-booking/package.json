@@ -1,9 +1,0 @@
-{
-  "name": "request-booking-function",
-  "version": "1.0.0",
-  "description": "Handles form submissions for booking requests.",
-  "main": "index.js",
-  "dependencies": {
-    "@sendgrid/mail": "^7.7.0"
-  }
-}
