@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides - STAFFAPPS AUSTRALIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px rgba(124, 58, 237, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="StaffAppsLogo.png" 
+                     alt="StaffApps Logo" 
+                     class="h-8 w-auto mr-3" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/100x40/111827/FFFFFF?text=SA';">
+                <span class="text-2xl font-extrabold text-gray-900 tracking-widest">STAFFAPPS</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html#why-us" class="text-gray-600 hover:text-purple-600">PowerApps</a>
+                <a href="index.html#services" class="text-gray-600 hover:text-purple-600">Services</a>
+                <a href="Guides.html" class="text-purple-600 font-semibold">Guides</a>
+                <a href="index.html#consulting" class="text-gray-600 hover:text-purple-600">Consulting</a>
+                <a href="index.html#contact" class="cta-button bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-purple-700">
+                    Free Consultation
+                </a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <a href="index.html#why-us" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">PowerApps</a>
+            <a href="index.html#services" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="Guides.html" class="block py-3 px-6 text-purple-600 bg-gray-100">Guides</a>
+            <a href="index.html#consulting" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Consulting</a>
+            <a href="index.html#contact" class="block py-4 px-6 text-center bg-purple-600 text-white font-semibold rounded-b-lg hover:bg-purple-700">
+                Book Free Consultation
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-white border-b border-gray-200">
+            <div class="container mx-auto px-6 py-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">
+                    Guides & Resources
+                </h1>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                    Insights and articles on PowerApps development, workflow automation, and digital transformation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Guides Content Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-2xl font-bold">Coming Soon!</h2>
+                    <p class="mt-4 text-gray-600">
+                        We're busy writing our first set of guides to help you get the most out of the Power Platform. Check back soon for articles and tutorials.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 STAFFAPPS AUSTRALIA. All Rights Reserved.</p>
+            <p class="text-gray-400 mt-2">Custom PowerApps Solutions for Australian Businesses.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
