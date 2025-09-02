@@ -1,0 +1,50 @@
+<!-- 
+  This is a headless HTML file for a single guide.
+  The main guides.html page will fetch this content.
+  The data-* attributes are used to build the summary card on the list page.
+-->
+<article 
+    data-title="Understanding PowerApps Delegation with SharePoint" 
+    data-date="September 2, 2025"
+    data-description="A practical guide to understanding and fixing delegation warnings in PowerApps when using a SharePoint list as your data source.">
+    
+    <h1>Understanding PowerApps Delegation with SharePoint</h1>
+    <p class="text-gray-500 text-base">Published on September 2, 2025 by STAFFAPPS Australia</p>
+    
+    <p>If you've built a PowerApp on a SharePoint list with more than a few hundred items, you've probably seen the dreaded blue underline and delegation warning. Understanding what this means is the key to building fast, scalable, and reliable apps. Let's break it down.</p>
+
+    <img src="guides/images/delegation-warning.png" onerror="this.onerror=null;this.src='https://placehold.co/800x400/ede9fe/8b5cf6?text=Delegation+Warning';" alt="A screenshot showing a delegation warning in PowerApps" class="rounded-lg shadow-md my-8">
+
+    <h2>What is Delegation?</h2>
+    <p>In simple terms, delegation is PowerApps' ability to "delegate" the work of processing data to the data source itself—in this case, SharePoint. When a formula is "delegable," PowerApps sends a simple query to SharePoint (like "find all items where the status is 'Complete'"), and SharePoint does all the heavy lifting of filtering through thousands of rows and only sends back the small, relevant dataset. This is very fast and efficient.</p>
+    <p>The problem occurs when a formula is **non-delegable**. PowerApps can't translate your request into a query SharePoint understands. To protect itself from crashing, PowerApps will first download a small chunk of data from your list (by default, the first 500 rows) and *then* run your complex formula on that small, local set. This means your app will ignore any matching data beyond the 500-row limit, leading to incorrect results and confused users.</p>
+
+    <h2>The SharePoint Row Limit</h2>
+    <p>By default, the delegation limit is 500 rows. You can increase this in your app's settings up to a maximum of 2,000. While this helps, it doesn't solve the core problem. The goal should always be to write delegable formulas so your app can work with <strong>all your data</strong>, whether you have 100 rows or 100,000.</p>
+
+        <h3>Bad (Non-Delegable) Formulas:</h3>
+    <p>These formulas use functions or logic that PowerApps has to process locally, triggering the delegation warning.</p>
+    <ul>
+        <li><code>Filter('YourList', "search term" in Title)</code> - The 'in' operator is not delegable for SharePoint text columns. Use <strong>StartsWith</strong> instead.</li>
+        <li><code>CountRows(Filter('YourList', Status = "Active"))</code> - Counting a filtered set is not delegable.</li>
+        <li><code>SortByColumns(Filter(...), "ComplexColumnName")</code> - Sorting by certain complex column types (like choice or lookup columns) can be problematic.</li>
+    </ul>
+
+    <h2>How to Write Delegable Formulas (The Solution)</h2>
+    <p>The key is to use functions that SharePoint can understand. When working with a SharePoint list, stick to simple, direct queries.</p>
+
+
+        <h3>Good (Delegable) Formulas:</h3>
+    <p>These formulas are simple and can be executed efficiently by SharePoint directly.</p>
+    <ul>
+        <li><code>Filter('YourList', Status = "Active")</code></li>
+        <li><code>Filter('YourList', StartsWith(Title, "ProjectX"))</code></li>
+        <li><code>Sort('YourList', Created, SortOrder.Descending)</code></li>
+        <li><code>LookUp('YourList', ID = varSelectedID)</code></li>
+    </ul>
+    
+    <img src="guides/images/delegable-formula.png" onerror="this.onerror=null;this.src='https://placehold.co/800x400/8b5cf6/FFFFFF?text=Correct+Formula';" alt="A screenshot of a PowerApp with a correct, delegable formula" class="rounded-lg shadow-md my-8">
+
+    <h2>Key Takeaway</h2>
+    <p>Always aim to write your formulas so that the little blue underline and warning triangle do not appear. Test your app with more than 500 items in your SharePoint list to ensure your filters and galleries are behaving as expected. By mastering delegation, you can build powerful, enterprise-grade applications that your users can trust.</p>
+</article>
