@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17516146637"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -27,18 +28,20 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px -10px rgba(124, 58, 237, 0.6);
         }
-        .service-item {
+        .service-card {
             transition: all 0.3s ease;
+            border-left: 4px solid transparent;
         }
-        .service-item:hover {
+        .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            border-color: #8b5cf6;
+            border-left-color: #8b5cf6; /* Purple accent on hover */
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Header & Navigation -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center">
@@ -77,6 +80,7 @@
     </header>
 
     <main>
+        <!-- Page Header -->
         <section class="bg-white border-b border-gray-200">
             <div class="container mx-auto px-6 py-16 text-center">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">
@@ -88,47 +92,96 @@
             </div>
         </section>
 
+        <!-- Services Grid -->
         <section class="py-20">
             <div class="container mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">Power Platform Consultancy</h3>
+                    <!-- Service: Power Platform Consultancy -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Power Platform Consultancy</h3>
+                        </div>
                         <p class="text-gray-600">Go beyond single apps. We help you build end-to-end business solutions by combining Power Apps, Power Automate, and Power BI for complete process automation and data-driven insights.</p>
                     </div>
 
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">Microsoft Power Apps Development</h3>
+                    <!-- Service: Microsoft Power Apps Development -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Microsoft Power Apps Development</h3>
+                        </div>
                         <p class="text-gray-600">Our core specialty. We design and build custom, user-friendly applications that replace inefficient spreadsheets and streamline your unique business processes.</p>
                     </div>
 
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">Dataverse Consultancy</h3>
+                    <!-- Service: Dataverse Consultancy -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                           <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Dataverse Consultancy</h3>
+                        </div>
                         <p class="text-gray-600">Build your applications on a secure, scalable data backbone. We help you model and manage your business data in Dataverse, ensuring a single source of truth for your entire Power Platform.</p>
                     </div>
 
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">SharePoint Consultancy & Migration</h3>
+                    <!-- Service: SharePoint Consultancy & Migration -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">SharePoint Consultancy & Migration</h3>
+                        </div>
                         <p class="text-gray-600">Transform SharePoint into your company's central collaboration hub. We design intelligent intranets, structure document management systems, and execute seamless migrations to SharePoint Online.</p>
                     </div>
 
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">Microsoft Teams Consultancy</h3>
+                    <!-- Service: Microsoft Teams Consultancy -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Microsoft Teams Consultancy</h3>
+                        </div>
                         <p class="text-gray-600">Turn Microsoft Teams into more than just a chat tool. We help you implement governance, integrate apps, and automate workflows directly within the platform your team uses every day.</p>
                     </div>
 
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">AI & Copilot Training for Staff</h3>
+                    <!-- Service: AI & Copilot Training -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                           <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">AI & Copilot Training for Staff</h3>
+                        </div>
                         <p class="text-gray-600">Future-proof your workforce. We provide practical, hands-on training to help your staff leverage Microsoft Copilot and other AI tools to dramatically boost their daily productivity and innovation.</p>
                     </div>
 
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">365 Administration & Consultancy</h3>
+                    <!-- Service: 365 Administration & Consultancy -->
+                     <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                           <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">365 Administration & Consultancy</h3>
+                        </div>
                         <p class="text-gray-600">Let us handle the technical complexities of your Microsoft 365 environment. We provide expert administration, tenant optimization, and ongoing support to ensure everything runs smoothly.</p>
                     </div>
                     
-                    <div class="service-item bg-white p-8 rounded-lg border-l-4 border-gray-200">
-                        <h3 class="text-xl font-bold mb-2">365 Security Consultancy</h3>
+                    <!-- Service: 365 Security Consultancy -->
+                    <div class="service-card bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
+                        <div class="flex items-center mb-4">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                            </div>
+                            <h3 class="text-xl font-bold">365 Security Consultancy</h3>
+                        </div>
                         <p class="text-gray-600">Protect your most valuable digital assets. We conduct security audits, implement threat protection policies, and help you configure your Microsoft 365 tenant to safeguard against modern cyber threats.</p>
                     </div>
 
@@ -136,6 +189,7 @@
             </div>
         </section>
 
+        <!-- CTA Section -->
         <section class="bg-white">
             <div class="container mx-auto px-6 py-20 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold">Ready to Enhance Your Operations?</h2>
@@ -150,6 +204,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 STAFFAPPS AUSTRALIA. All Rights Reserved.</p>
@@ -157,6 +212,7 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Mobile Menu -->
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
