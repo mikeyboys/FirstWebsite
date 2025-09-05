@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Safety & Compliance App - STAFFAPPS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17516146637"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17516146637');
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg-product {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://raw.githubusercontent.com/mikeyboys/FirstWebsite/33e8c053343be5aea16611b1acfc4e6923632328/close-up-construction-engineer-using-tablet.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px rgba(124, 58, 237, 0.6); /* Purple shadow */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="StaffAppsLogo.png" 
+                     alt="StaffApps Logo" 
+                     class="h-8 w-auto mr-3" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/100x40/111827/FFFFFF?text=SA';">
+                <span class="text-2xl font-extrabold text-gray-900 tracking-widest">STAFFAPPS</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html#why-us" class="text-gray-600 hover:text-purple-600">PowerApps</a>
+                <a href="services.html" class="text-gray-600 hover:text-purple-600">Services</a>
+                
+                <div class="relative group" id="products-dropdown-container">
+                    <a href="workplace-safety.html" class="text-purple-600 font-semibold inline-flex items-center">
+                        Products
+                        <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <div id="products-dropdown-menu" class="origin-top-right absolute right-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 transform scale-95 group-hover:scale-100 z-50">
+                        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="products-dropdown-button">
+                            <a href="workplace-safety.html" class="text-purple-600 bg-gray-100 block px-4 py-2 text-sm" role="menuitem">Worksite safety and compliance</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Timesheet and leave system</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Inventory and asset management</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Employee onboarding app</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Vehicle logbooks</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Project task management</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Maintenance requests</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Sales pipeline and CRM</a>
+                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Quoting and Invoicing systems</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="guides.html" class="text-gray-600 hover:text-purple-600">Guides</a>
+                <a href="index.html#consulting" class="text-gray-600 hover:text-purple-600">Consulting</a>
+                <a href="#contact" class="cta-button bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-purple-700">
+                    Free Consultation
+                </a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+         <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <a href="index.html#why-us" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">PowerApps</a>
+            <a href="services.html" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Services</a>
+            
+            <div>
+                <button id="mobile-products-button" class="w-full text-left py-3 px-6 text-gray-700 hover:bg-gray-100 flex justify-between items-center">
+                    <span>Products</span>
+                    <svg id="mobile-products-arrow" class="w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div id="mobile-products-menu" class="hidden pl-8 bg-gray-50">
+                    <a href="workplace-safety.html" class="block py-2 px-6 text-purple-600 font-semibold hover:bg-gray-200">Worksite safety and compliance</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Timesheet and leave system</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Inventory and asset management</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Employee onboarding app</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Vehicle logbooks</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Project task management</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Maintenance requests</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Sales pipeline and CRM</a>
+                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Quoting and Invoicing systems</a>
+                </div>
+            </div>
+
+            <a href="guides.html" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Guides</a>
+            <a href="index.html#consulting" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Consulting</a>
+            <a href="#contact" class="block py-4 px-6 text-center bg-purple-600 text-white font-semibold rounded-b-lg hover:bg-purple-700">
+                Book Free Consultation
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-bg-product text-white">
+            <div class="container mx-auto px-6 py-24 md:py-40 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    Ditch the Clipboard. Master Your Site Safety.
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+                    The all-in-one safety compliance app for trades and construction crews. Handle your SWMS, JSAs, and Pre-Starts in under 2 minutes—right from your phone.
+                </p>
+                <div class="mt-10">
+                    <a href="#contact" class="cta-button bg-purple-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-xl hover:bg-purple-700 text-base sm:text-lg">
+                        Book a FREE Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="problems" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Sound Familiar?</h2>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">It's Friday afternoon. You've had a massive week on the tools, and the paperwork just keeps piling up. Does this sound like your business?</p>
+                <div class="mt-12 max-w-2xl mx-auto text-left space-y-4">
+                    <div class="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <span class="text-green-500 text-2xl mr-4">✅</span>
+                        <p class="text-gray-700">Chasing your crew for grubby, incomplete paperwork.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <span class="text-green-500 text-2xl mr-4">✅</span>
+                        <p class="text-gray-700">Worrying what would happen if a safety inspector showed up on site tomorrow.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <span class="text-green-500 text-2xl mr-4">✅</span>
+                        <p class="text-gray-700">Losing hours of your evening to admin instead of quoting new jobs or spending time with family.</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg flex items-start">
+                        <span class="text-green-500 text-2xl mr-4">✅</span>
+                        <p class="text-gray-700">Finding out about a machinery fault only when it's already broken down, costing you time and money.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                 <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold">Introducing the StaffApps Safety Pack</h2>
+                    <p class="text-gray-600 mt-4">The StaffApps Safety Pack is a straightforward app designed to get your safety compliance sorted, fast. We take the paperwork you have to do and make it something you want to do—because it's quick, simple, and makes your business better.</p>
+                    <p class="text-gray-600 mt-2">It's built to run on the Microsoft 365 platform you likely already use. No confusing software, just a simple tool that works.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold">Everything You Need, Nothing You Don't</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Our Safety Pack combines the three most critical safety forms into one easy-to-use app for your whole crew.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-purple-100 text-purple-600 mb-5 mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Legally Compliant SWMS</h3>
+                        <p class="text-gray-600">Create, review, and get the entire crew to sign off on a compliant Safe Work Method Statement right on a phone or tablet. We even pre-load your most common high-risk tasks to turn a 20-minute job into a 2-minute check.</p>
+                    </div>
+                     <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-purple-100 text-purple-600 mb-5 mx-auto">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Daily Site Risk Assessments (JSAs)</h3>
+                        <p class="text-gray-600">Start each day with a quick, smart checklist to identify and control site-specific risks. Attach photos of hazards, add notes, and create a time-stamped digital record that proves your commitment to safety.</p>
+                    </div>
+                     <div class="p-6">
+                        <div class="flex items-center justify-center h-20 w-20 rounded-full bg-purple-100 text-purple-600 mb-5 mx-auto">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h8a1 1 0 001-1z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h2a1 1 0 001-1V7a1 1 0 00-1-1h-2" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Vehicle & Plant Pre-Start Checklists</h3>
+                        <p class="text-gray-600">Your crew can run through a 60-second check on their ute, truck, or excavator each morning. If they spot a fault, you get an instant email alert, so you can schedule a repair before it causes costly downtime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h2 class="text-3xl md:text-4xl font-bold">Your Business, But Smarter and Safer.</h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 text-white">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg leading-6 font-bold text-gray-900">Save Hours, Not Minutes</h3>
+                            <p class="mt-1 text-base text-gray-600">Turn an hour of nightly paperwork into 5 minutes on the job site. Free up your evenings to quote more work or just switch off.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 text-white">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg leading-6 font-bold text-gray-900">Stay Compliant, Avoid Fines</h3>
+                            <p class="mt-1 text-base text-gray-600">Generate professional, time-stamped PDF records for every form. Be ready for any audit.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 text-white">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg leading-6 font-bold text-gray-900">Protect Your Crew & Your Gear</h3>
+                            <p class="mt-1 text-base text-gray-600">Promote a real safety culture by making compliance easy. Catch equipment faults before they become dangerous or expensive problems.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-10 w-10 rounded-full bg-green-500 text-white">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg leading-6 font-bold text-gray-900">One-Time Cost, Lifetime Value</h3>
+                            <p class="mt-1 text-base text-gray-600">Because the app is built inside your own Microsoft 365 environment, you own it. It's a one-time investment for a permanent business asset.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Ready to Ditch the Paperwork for Good?</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Stop letting paperwork run your business. Let's have a quick, no-obligation chat to see how the Safety Pack can work for you. It's 15 minutes that could save you 5 hours a week.</p>
+                <div class="max-w-xl mx-auto mt-12">
+                    <div id="contact-form-container" class="bg-white p-8 rounded-lg shadow-xl border border-gray-200 text-left">
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="853f5054-ec35-45cb-b2d1-ef7c10223cd4">
+                            <input type="hidden" name="subject" value="New Safety App Consultation Request from STAFFAPPS">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="John Doe" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="you@company.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Contact Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="0400 123 456">
+                            </div>
+                             <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">How can we help?</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Tell us a little about what you're after..." required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="w-full cta-button bg-purple-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-purple-700">
+                                    Book Your Free Consultation Now
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="form-result" class="hidden mt-4 px-4 py-3 rounded-lg relative" role="alert"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 STAFFAPPS AUSTRALIA. All Rights Reserved.</p>
+            <p class="text-gray-400 mt-2">Custom PowerApps Solutions for Australian Businesses.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                if (!link.parentElement.id.includes("mobile-products")) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        }
+
+        // --- Mobile Products Accordion ---
+        const mobileProductsButton = document.getElementById('mobile-products-button');
+        const mobileProductsMenu = document.getElementById('mobile-products-menu');
+        const mobileProductsArrow = document.getElementById('mobile-products-arrow');
+
+        if (mobileProductsButton) {
+            mobileProductsButton.addEventListener('click', () => {
+                mobileProductsMenu.classList.toggle('hidden');
+                mobileProductsArrow.classList.toggle('rotate-90');
+            });
+        }
+
+
+        // --- Web3Forms Submission Logic ---
+        const form = document.getElementById('contact-form');
+        const formContainer = document.getElementById('contact-form-container');
+        const resultDiv = document.getElementById('form-result');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            resultDiv.innerHTML = "Please wait...";
+            resultDiv.classList.remove('hidden');
+            resultDiv.classList.add('bg-yellow-100', 'border', 'border-yellow-400', 'text-yellow-700');
+
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    resultDiv.classList.remove('bg-yellow-100', 'border-yellow-400', 'text-yellow-700');
+                    if (response.status == 200) {
+                        formContainer.classList.add('hidden');
+                        resultDiv.innerHTML = `<strong class="font-bold">Thank you!</strong><span class="block sm:inline"> We've received your request and will call you within the hour.</span>`;
+                        resultDiv.classList.add('bg-green-100', 'border', 'border-green-400', 'text-green-700');
+                        gtag_report_conversion();
+                    } else {
+                        console.log(response);
+                        resultDiv.innerHTML = jsonResponse.message;
+                        resultDiv.classList.add('bg-red-100', 'border', 'border-red-400', 'text-red-700');
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    resultDiv.innerHTML = "Sorry, there was an error submitting your request.";
+                    resultDiv.classList.add('bg-red-100', 'border', 'border-red-400', 'text-red-700');
+                })
+                .then(function() {
+                    form.reset();
+                });
+        });
+    </script>
+    
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17516146637/XmIYCJfp75EbEM3frKBB',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
+</body>
+</html>
+
