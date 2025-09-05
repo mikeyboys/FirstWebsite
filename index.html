@@ -65,29 +65,6 @@
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#why-us" class="text-gray-600 hover:text-purple-600">PowerApps</a>
                 <a href="services.html" class="text-gray-600 hover:text-purple-600">Services</a>
-                
-                <div class="relative group" id="products-dropdown-container">
-                    <button class="text-gray-600 hover:text-purple-600 inline-flex items-center">
-                        Products
-                        <svg class="ml-2 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <div id="products-dropdown-menu" class="origin-top-right absolute right-0 mt-2 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 transform scale-95 group-hover:scale-100 z-50">
-                        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="products-dropdown-button">
-                            <a href="worksite-safety-and-compliance.html" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Worksite safety and compliance</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Timesheet and leave system</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Inventory and asset management</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Employee onboarding app</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Vehicle logbooks</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Project task management</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Maintenance requests</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Sales pipeline and CRM</a>
-                            <a href="#" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100" role="menuitem">Quoting and Invoicing systems</a>
-                        </div>
-                    </div>
-                </div>
-
                 <a href="guides.html" class="text-gray-600 hover:text-purple-600">Guides</a>
                 <a href="#consulting" class="text-gray-600 hover:text-purple-600">Consulting</a>
                 <a href="#contact" class="cta-button bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-purple-700">
@@ -105,27 +82,6 @@
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
             <a href="#why-us" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">PowerApps</a>
             <a href="services.html" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Services</a>
-            
-            <div>
-                <button id="mobile-products-button" class="w-full text-left py-3 px-6 text-gray-700 hover:bg-gray-100 flex justify-between items-center">
-                    <span>Products</span>
-                    <svg id="mobile-products-arrow" class="w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-                <div id="mobile-products-menu" class="hidden pl-8 bg-gray-50">
-                    <a href="worksite-safety-and-compliance.html" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Worksite safety and compliance</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Timesheet and leave system</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Inventory and asset management</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Employee onboarding app</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Vehicle logbooks</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Project task management</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Maintenance requests</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Sales pipeline and CRM</a>
-                    <a href="#" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Quoting and Invoicing systems</a>
-                </div>
-            </div>
-
             <a href="guides.html" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Guides</a>
             <a href="#consulting" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Consulting</a>
             <a href="#contact" class="block py-4 px-6 text-center bg-purple-600 text-white font-semibold rounded-b-lg hover:bg-purple-700">
@@ -329,27 +285,12 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
         for (let link of mobileMenuLinks) {
             link.addEventListener('click', () => {
-                 if (!link.parentElement.id.includes("mobile-products")) {
-                    mobileMenu.classList.add('hidden');
-                }
+                mobileMenu.classList.add('hidden');
             });
         }
-        
-        // --- Mobile Products Accordion ---
-        const mobileProductsButton = document.getElementById('mobile-products-button');
-        const mobileProductsMenu = document.getElementById('mobile-products-menu');
-        const mobileProductsArrow = document.getElementById('mobile-products-arrow');
-
-        if (mobileProductsButton) {
-            mobileProductsButton.addEventListener('click', () => {
-                mobileProductsMenu.classList.toggle('hidden');
-                mobileProductsArrow.classList.toggle('rotate-90');
-            });
-        }
-
 
         // --- Web3Forms Submission Logic ---
         const form = document.getElementById('contact-form');
@@ -420,4 +361,3 @@
 
 </body>
 </html>
-
