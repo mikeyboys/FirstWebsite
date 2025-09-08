@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Custom Timesheet App for Small & Medium Business - StaffApps Australia</title>
+    <meta name="description" content="Stop chasing paper timesheets. StaffApps builds custom, affordable timesheet apps on Microsoft Power Platform for Australian businesses to streamline payroll and time tracking.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17516146637"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17516146637');
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #f5f3ff; /* Lighter purple */
+            background-image: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px rgba(124, 58, 237, 0.6); /* Purple shadow */
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        .checklist-item svg {
+            flex-shrink: 0;
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="StaffAppsLogo.png" 
+                     alt="StaffApps Logo" 
+                     class="h-8 w-auto mr-3" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/100x40/111827/FFFFFF?text=SA';">
+                <span class="text-2xl font-extrabold text-gray-900 tracking-widest">StaffApps</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html#why-us" class="text-gray-600 hover:text-purple-600">Why PowerApps?</a>
+                <a href="services.html" class="text-gray-600 hover:text-purple-600">Services</a>
+                <a href="guides.html" class="text-gray-600 hover:text-purple-600">Guides</a>
+                <a href="index.html#consulting" class="text-gray-600 hover:text-purple-600">Consulting</a>
+                <a href="#contact" class="cta-button bg-purple-600 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:bg-purple-700">
+                    Free Consultation
+                </a>
+            </nav>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <a href="index.html#why-us" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Why PowerApps?</a>
+            <a href="services.html" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="guides.html" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Guides</a>
+            <a href="index.html#consulting" class="block py-3 px-6 text-gray-700 hover:bg-gray-100">Consulting</a>
+            <a href="#contact" class="block py-4 px-6 text-center bg-purple-600 text-white font-semibold rounded-b-lg hover:bg-purple-700">
+                Book Free Consultation
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                    End the Timesheet Headache for Good
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tired of chasing paper timesheets and manually entering hours? Get a simple, affordable app for your team's phones and computers that makes tracking time and running payroll a breeze.
+                </p>
+                <div class="mt-10">
+                    <a href="#contact" class="cta-button bg-purple-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg shadow-xl hover:bg-purple-700 text-base sm:text-lg">
+                        Book a Free Consultation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section id="problem" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Paper or Spreadsheets Slowing Your Business Down?</h2>
+                    <p class="text-gray-600 mt-4 max-w-3xl mx-auto">For a growing business, every minute counts. Chasing staff for timesheets, maintaining messy spreadsheets, and manually typing hours into your payroll system is a drain on your time and can lead to costly mistakes. Does this sound familiar?</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 mr-5">
+                            <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Wasted Time</h3>
+                            <p class="text-gray-600">Hours spent every pay cycle chasing staff, collecting forms, and manually entering data.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 mr-5">
+                            <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Costly Mistakes</h3>
+                            <p class="text-gray-600">Simple errors in data entry can lead to overpaying staff or creating compliance headaches.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 mr-5">
+                            <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 16.318A4.486 4.486 0 0012.016 15a4.486 4.486 0 00-3.198 1.318M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75h.008v.008H9.75V9.75zm4.5 0h.008v.008h-.008V9.75z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Frustrated Staff</h3>
+                            <p class="text-gray-600">Your team finds it a hassle to fill out paper forms or clunky spreadsheets, especially when they're on the go.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-600 mr-5">
+                            <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Delayed Payroll</h3>
+                            <p class="text-gray-600">The whole process takes so long that it becomes a bottleneck, delaying payroll and reporting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution Section -->
+        <section id="solution" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold">A Smarter, Simpler Way to Track Time</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">We'll create a custom timesheet app that your team will actually want to use. It’s designed to be fast, easy, and intuitive.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="feature-card bg-white p-8 rounded-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-600 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg></div>
+                        <h3 class="text-xl font-bold mb-2">Easy for Your Staff</h3>
+                        <p class="text-gray-600">Your team can log their hours in seconds right from their mobile phone or desktop computer. It's as simple as using any other app. No more excuses for late timesheets!</p>
+                    </div>
+                    <div class="feature-card bg-white p-8 rounded-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-600 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg></div>
+                        <h3 class="text-xl font-bold mb-2">Automatic Reminders</h3>
+                        <p class="text-gray-600">The app automatically reminds staff to submit their timesheets and lets managers know when they are ready for approval. You can finally stop chasing people down.</p>
+                    </div>
+                    <div class="feature-card bg-white p-8 rounded-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-600 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
+                        <h3 class="text-xl font-bold mb-2">Stress-Free Payroll</h3>
+                        <p class="text-gray-600">Approve timesheets with a single click. When you're ready, the app creates a simple, clean report (e.g., a CSV file) that you can upload directly to your payroll system like Xero, MYOB, or others. No more typing!</p>
+                    </div>
+                    <div class="feature-card bg-white p-8 rounded-lg border border-gray-200">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-600 mb-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div>
+                        <h3 class="text-xl font-bold mb-2">Clear Oversight for Managers</h3>
+                        <p class="text-gray-600">Quickly see who has submitted their hours and approve them from anywhere. Get a clear view of labour costs without waiting for the end of the week.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Built for You" Advantage Section -->
+        <section id="advantage" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                         <img src="https://placehold.co/600x450/e9d5ff/4c1d95?text=Your+App+on+Mobile+&+Desktop" alt="Diagram showing the app working on a phone and computer, connected to Microsoft 365." class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mt-2">Built Using the Microsoft Tools You Already Own</h2>
+                        <p class="mt-4 text-gray-600">Instead of selling you another expensive monthly software subscription, we build your timesheet app right into your existing Microsoft 365 setup. This is a smarter way to get the tools you need.</p>
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <div><strong class="font-semibold">Save Money:</strong> Our apps use the Microsoft licenses you're likely already paying for. This means no surprise subscription fees and a much lower overall cost.</div>
+                            </div>
+                             <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <div><strong class="font-semibold">Your Data Stays Safe:</strong> All your timesheet information stays secure within your own business account, protected by Microsoft's world-class security. No third-party risks.</div>
+                            </div>
+                             <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <div><strong class="font-semibold">Ready in Weeks, Not Months:</strong> Because we're using a powerful platform you already own, we can design, build, and launch your custom app much faster than you might think.</div>
+                            </div>
+                             <div class="flex items-start">
+                                <svg class="w-6 h-6 text-green-500 mr-3 flex-shrink-0 mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                                <div><strong class="font-semibold">A Perfect Fit for Your Business:</strong> We tailor the app to your exact needs. Whether you need to track specific jobs, allowances, or leave, we build it to work the way you do.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Ready to Make Timesheets Easy?</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Fill out the form below and we'll call you back <strong class="text-purple-600">within the hour</strong> for a free, no-obligation chat about your new timesheet app.</p>
+                <div class="max-w-xl mx-auto mt-12">
+                    <div id="contact-form-container" class="bg-white p-8 rounded-lg shadow-xl border border-gray-200 text-left">
+                        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="853f5054-ec35-45cb-b2d1-ef7c10223cd4">
+                            <input type="hidden" name="subject" value="New Timesheet App Consultation Request from STAFFAPPS Website">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="John Doe" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="you@company.com" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Contact Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="0400 123 456">
+                            </div>
+                             <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">How can we help?</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Tell us a little about your project or the challenges you're facing..." required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="w-full cta-button bg-purple-600 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-purple-700">
+                                    Get a Call Back
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="form-result" class="hidden mt-4 px-4 py-3 rounded-lg relative" role="alert"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 STAFFAPPS AUSTRALIA. All Rights Reserved.</p>
+            <p class="text-gray-400 mt-2">Custom PowerApps Solutions for Australian Businesses.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        }
+
+        // --- Web3Forms Submission Logic ---
+        const form = document.getElementById('contact-form');
+        const formContainer = document.getElementById('contact-form-container');
+        const resultDiv = document.getElementById('form-result');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            resultDiv.innerHTML = "Please wait...";
+            resultDiv.classList.remove('hidden');
+            resultDiv.classList.add('bg-yellow-100', 'border', 'border-yellow-400', 'text-yellow-700');
+
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    resultDiv.classList.remove('bg-yellow-100', 'border-yellow-400', 'text-yellow-700');
+                    if (response.status == 200) {
+                        formContainer.classList.add('hidden');
+                        resultDiv.innerHTML = `<strong class="font-bold">Thank you!</strong><span class="block sm:inline"> We've received your request and will call you within the hour.</span>`;
+                        resultDiv.classList.add('bg-green-100', 'border', 'border-green-400', 'text-green-700');
+                        
+                        // Fire the conversion event on successful submission
+                        gtag_report_conversion();
+
+                    } else {
+                        console.log(response);
+                        resultDiv.innerHTML = jsonResponse.message;
+                        resultDiv.classList.add('bg-red-100', 'border', 'border-red-400', 'text-red-700');
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    resultDiv.innerHTML = "Sorry, there was an error submitting your request.";
+                    resultDiv.classList.add('bg-red-100', 'border', 'border-red-400', 'text-red-700');
+                })
+                .then(function() {
+                    form.reset(); // Clear the form fields
+                });
+        });
+    </script>
+    
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17516146637/XmIYCJfp75EbEM3frKBB',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
+</body>
+</html>
+
